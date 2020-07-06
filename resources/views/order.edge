@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>order Details</title>
+</head>
+<body>
+       <h1>{{name}} your Order Details</h1> 
+
+    @each(carddata in value)
+    @each(item in carddata.product)
+    <h2>Product name:-{{item.title}}</h2>  
+    @endeach        
+    <h2>Qty :-{{carddata.qty}}</h2>
+    <h2>Price :-{{carddata.price}}</h2>
+    <h2>Totalprice :-{{carddata.totalprice}}</h2>
+    @endeach
+
+    <h1>TotalPrice Is :- {{totalsum}}</h1>
+</body>   
+</html>
